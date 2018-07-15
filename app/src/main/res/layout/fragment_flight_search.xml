@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txt_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="@dimen/dp_40"
+                android:paddingStart="@dimen/dp_10"
+                android:text="@string/from"
+                android:textColor="@color/color_ff2c2a2d"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:inputType="text"
+                android:minHeight="@dimen/dp_40"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txt_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="@dimen/dp_40"
+                android:paddingStart="@dimen/dp_10"
+                android:text="@string/to"
+                android:textColor="@color/color_ff2c2a2d"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:inputType="text"
+                android:minHeight="@dimen/dp_40"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/one_way_journey_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/one_way_journey"
+                android:textColor="@color/color_ff2c2a2d"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/departureDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:hint="@string/txt_departure"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:onClick="@{handler.onClick}"
+                android:textColor="@color/color_ff2c2a2d"
+                android:textColorHint="@color/color_ff8e8c90"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/returnDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:hint="@string/txt_return"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:onClick="@{handler.onClick}"
+                android:textColor="@color/color_ff2c2a2d"
+                android:textColorHint="@color/color_ff8e8c90"
+                android:textSize="@dimen/sp_14" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@drawable/btn_bg"
+                android:onClick="@{handler::onClick}"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_40"
+                android:paddingStart="@dimen/dp_40"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/search"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="flightDetails"
+            type="com.airasia.models.FlightDetail" />
+        <variable
+            name="isOneWay"
+            type="boolean"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/fare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/total_fare.concat(flightDetails!=null ? String.valueOf(flightDetails.getTotal_amt()) : @string/empty)}"
+            android:textColor="@color/color_ff2c2a2d"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/onward_pv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/onward"
+                    android:textColor="@color/color_ff2c2a2d"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"
+                    app:textAllCaps="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@{@string/flight_no.concat(flightDetails!=null&amp;flightDetails.onward!=null ? String.valueOf(flightDetails.getOnward().flightNo) : @string/empty)}"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/color_ff2c2a2d"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@{@string/duration.concat(flightDetails!=null&amp;flightDetails.onward!=null&amp;flightDetails.onward.duration!= null? String.valueOf(flightDetails.onward.duration) : @string/empty)}"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/color_ff2c2a2d" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/empty.concat(flightDetails!=null&amp;flightDetails.onward!=null&amp;flightDetails.onward.duration!= null? flightDetails.onward.departure.time : @string/empty).concat(@string/link).concat(flightDetails.onward.arrival.time)}"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/color_ff2c2a2d"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/return_pv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/return_j"
+                    android:textColor="@color/color_ff2c2a2d"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"
+                    app:textAllCaps="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@{@string/flight_no.concat(flightDetails!=null&amp;flightDetails.return!=null ? String.valueOf(flightDetails.return.flightNo) : @string/empty)}"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/color_ff2c2a2d"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@{@string/duration.concat(flightDetails!=null&amp;flightDetails.return!=null&amp;flightDetails.return.duration!= null? String.valueOf(flightDetails.return.duration) : @string/empty)}"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/color_ff2c2a2d" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/empty.concat(flightDetails!=null&amp;flightDetails.return!=null&amp;flightDetails.return.duration!= null? flightDetails.return.departure.time : @string/empty).concat(@string/link).concat(flightDetails.return.arrival.time)}"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/color_ff2c2a2d"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_ff2c2a2d"/>
+    </LinearLayout>
+</layout>

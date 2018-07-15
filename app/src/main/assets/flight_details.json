@@ -1,0 +1,121 @@
+{
+  "flightDetails": [
+    {
+      "total_amt": 14823,
+      "onward": {
+        "flightNo": 15722,
+        "duration": "2h 50m",
+        "departure": {
+          "city": "Bangalore",
+          "lat":13.199379,
+          "long":77.710136,
+          "time": "23:55",
+          "date": "15-07-2018"
+        },
+        "arrival": {
+          "city": "New Delhi",
+          "lat":28.556160,
+          "long": 77.100281,
+          "time": "02:45",
+          "date": "16-07-2018"
+        }
+      },
+      "return": {
+        "flightNo": 15721,
+        "duration": "2h 45m",
+        "departure": {
+          "city": "New Delhi",
+          "lat":28.556160,
+          "long": 77.100281,
+          "time": "20:45",
+          "date": "15-07-2018"
+        },
+        "arrival": {
+          "city": "Bengaluru",
+          "lat":13.199379,
+          "long":77.710136,
+          "time": "23:30",
+          "date": "15-07-2018"
+        }
+      }
+    },
+    {
+      "total_amt": 16586,
+      "onward": {
+        "flightNo": 15722,
+        "duration": "2h 50m",
+        "departure": {
+          "city": "Bangalore",
+          "lat":13.199379,
+          "long":77.710136,
+          "time": "23:55",
+          "date": "15-07-2018"
+        },
+        "arrival": {
+          "city": "New Delhi",
+          "lat":28.556160,
+          "long": 77.100281,
+          "time": "02:45",
+          "date": "16-07-2018"
+        }
+      },
+      "return": {
+        "flightNo": 151331,
+        "duration": "2h 45m",
+        "departure": {
+          "city": "New Delhi",
+          "lat":28.556160,
+          "long": 77.100281,
+          "time": "09:25",
+          "date": "16-07-2018"
+        },
+        "arrival": {
+          "city": "Bengaluru",
+          "lat":13.199379,
+          "long":77.710136,
+          "time": "12:10",
+          "date": "16-07-2018"
+        }
+      }
+    },
+    {
+      "total_amt": 17948,
+      "onward": {
+        "flightNo": 15722,
+        "duration": "2h 50m",
+        "departure": {
+          "city": "Bangalore",
+          "lat":13.199379,
+          "long":77.710136,
+          "time": "23:55",
+          "date": "15-07-2018"
+        },
+        "arrival": {
+          "city": "New Delhi",
+          "lat":28.556160,
+          "long": 77.100281,
+          "time": "02:45",
+          "date": "16-07-2018"
+        }
+      },
+      "return": {
+        "flightNo": 152879,
+        "duration": "2h 40m",
+        "departure": {
+          "city": "New Delhi",
+          "lat":28.556160,
+          "long": 77.100281,
+          "time": "16:45",
+          "date": "16-07-2018"
+        },
+        "arrival": {
+          "city": "Bengaluru",
+          "lat":13.199379,
+          "long":77.710136,
+          "time": "17:25",
+          "date": "16-07-2018"
+        }
+      }
+    }
+  ]
+}

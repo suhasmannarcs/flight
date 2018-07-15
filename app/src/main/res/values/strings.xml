@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AirAsia</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="world_s_best_low_cost_airline">World\'s Best Low Cost Airline</string>
+    <string name="txt_departure">Departure</string>
+    <string name="txt_return">Return</string>
+    <string name="search">Search</string>
+    <string name="one_way_journey">One Way Journey</string>
+    <string name="no_of_persons">No of Persons</string>
+    <string name="no_of_adults">No of adults</string>
+    <string name="no_of_children">No of Children</string>
+    <string name="empty"></string>
+    <string name="total_fare">Total Fare:Rs</string>
+    <string name="flight_no">Flight No: </string>
+    <string name="duration">Duration: </string>
+    <string name="link"> -> </string>
+    <string name="onward">Onward</string>
+    <string name="return_j">Return</string>
+    <string name="source_error">Source should not be empty</string>
+    <string name="destination_error">Destination should not be empty</string>
+    <string name="departure_error">Departure date should not be empty</string>
+    <string name="return_date_error">Return date should not be empty</string>
+</resources>
